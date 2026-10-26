@@ -1,1 +1,520 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>CSCI 310 – Midterm Practice Question Bank with Answers</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f3f6fb;color:#14233b;font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.65}header{background:linear-gradient(125deg,#102b54,#116b82);color:#fff;padding:45px max(22px,calc((100vw - 1120px)/2))}header h1{font-size:clamp(28px,4vw,44px);line-height:1.15;margin:10px 0}header p{max-width:800px;opacity:.92}.pill{display:inline-block;border:1px solid #ffffff55;padding:4px 12px;border-radius:40px;font-size:12px;letter-spacing:.07em}nav{position:sticky;top:0;background:#fff;box-shadow:0 2px 14px #14233b16;z-index:3;padding:11px 18px;display:flex;gap:9px;flex-wrap:wrap;align-items:center;justify-content:center}nav a{color:#145b77;text-decoration:none;font-size:13px;font-weight:700;padding:7px 11px;border-radius:8px;background:#eff7fa}main{max-width:1120px;margin:28px auto;padding:0 18px}.intro,.question,.panel{background:#fff;border:1px solid #dce5f1;border-radius:15px;padding:22px;margin:16px 0;box-shadow:0 4px 20px #1d37550a}.intro{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.stat{background:#eff6ff;border-radius:10px;padding:13px}.stat b{display:block;font-size:26px;color:#164a85}h2{margin:40px 0 14px;font-size:28px;color:#113c64}h3{margin:24px 0 12px;color:#164a85}.qhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.number{background:#e7f1fc;color:#154c7a;padding:4px 10px;border-radius:8px;font-weight:800}.week{margin-left:auto;color:#63718b;font-size:12px}.options{display:grid;gap:7px;margin:13px 0}.opt{display:flex;align-items:center;gap:10px;text-align:left;border:1px solid #dce5f1;background:#fff;color:inherit;padding:11px 13px;border-radius:9px;cursor:pointer;font:inherit}.opt:hover{border-color:#267b9c}.opt.correct{background:#e8f8ef;border-color:#169358}.opt.wrong{background:#fff0ee;border-color:#cc5148}.opt:disabled{cursor:default}.answer{border-left:4px solid #1c8a75;background:#effbf6;padding:12px 15px;border-radius:6px;margin-top:12px}.concept{border-left:4px solid #3e78bc;background:#f0f6ff;padding:12px 15px;border-radius:6px;margin-top:10px}.hidden{display:none}button.action{border:0;background:#166b87;color:white;border-radius:8px;padding:9px 13px;font-weight:700;cursor:pointer}button.secondary{background:#e7f1fc;color:#174e77}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#152640;color:#e8f2ff;border-radius:10px;padding:17px;line-height:1.6;font-size:13px}footer{text-align:center;padding:35px;color:#62758b}.tools{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}.subtle{color:#66788f;font-size:14px}.diagram{max-width:400px;width:100%;height:auto;display:block;margin:auto}body.dark{background:#0c1626;color:#e9f1fa}body.dark nav,body.dark .intro,body.dark .question,body.dark .panel{background:#17253a;border-color:#334860}body.dark h2,body.dark h3{color:#9ad6ff}body.dark .opt{background:#192b43;color:#e9f1fa;border-color:#3d536c}body.dark .stat,body.dark nav a,body.dark .number{background:#253c57;color:#cde7ff}body.dark .answer{background:#143d32;color:#e3ffef}body.dark .concept{background:#1d3554;color:#e4f2ff}body.dark .opt.correct{background:#184934}body.dark .opt.wrong{background:#572b2c}@media print{nav,.tools,.action{display:none!important}body{background:white!important;color:black!important}.question,.intro{box-shadow:none;break-inside:avoid}.hidden{display:block!important}header{padding:20px;color:white}main{max-width:none}}</style><style>
+.written .answer p{line-height:1.7;margin:12px 0}.written .answer ol,.written .answer ul{padding-left:26px;line-height:1.8}.written .answer li{margin:6px 0}.written .answer pre{background:#101e32;color:#f0f6ff;border-radius:10px;padding:17px;overflow-x:auto;font-size:15px;line-height:1.45;white-space:pre}.written .answer table{border-collapse:collapse;width:100%;margin:14px 0}.written .answer th,.written .answer td{padding:10px;border:1px solid #a7bbc9;text-align:left}.written .answer th{background:#dcecf8;color:#153451}.written .answer code:not(pre code){padding:2px 5px;background:#e4edf5;border-radius:4px;color:#102a42}.written .answer{overflow-wrap:anywhere}
+</style></head><body>
+<header><span class="pill">CSCI 310 · WEEKS 1–7</span><h1>Midterm Practice<br/>Question Bank</h1><p>65 practice questions · answers · two-sentence concept explanations for every question after the MCQs</p><p>Dr. Maher Alrahhal · Amity University Dubai · CLO 1 &amp; CLO 2</p></header>
+<nav><a href="#mcq">35 MCQs</a><a href="#B">Code Analysis</a><a href="#C">Short Answers</a><a href="#D">Bonus Scheme</a><a href="#top" onclick="window.scrollTo(0,0);return false">Top ↑</a><button class="action secondary" onclick="document.body.classList.toggle('dark')">☾ Theme</button></nav>
+<main><div class="intro"><div class="stat"><b>35</b>Interactive MCQs</div><div class="stat"><b>15</b>Code &amp; Problem Questions</div><div class="stat"><b>10</b>Short Answers</div><div class="stat"><b>5</b>Bonus Questions</div></div><section class="panel"><h3>How to study</h3><p>Try each MCQ before revealing its answer. For written questions, attempt the code or explanation first, then reveal the model answer and the two-sentence concept summary. MCQs use their own numbering (1–35); written questions restart at Q1 and continue through Q30.</p><div class="tools"><button class="action" onclick="revealAll(true)">Reveal all written answers</button><button class="action secondary" onclick="revealAll(false)">Hide all written answers</button><button class="action secondary" onclick="window.print()">Print / Save as PDF</button></div></section><h2 id="mcq">Section A – Multiple-Choice Questions</h2><p class="subtle">Select one answer per question to check your response immediately.</p><div class="panel"><b>MCQ score: <span id="score">0</span> / 35</b> <button class="action secondary" onclick="resetMcq()">Reset MCQs</button></div>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q1</span><strong>Which paradigm organises programs around objects containing data and methods?</strong><span class="week">W1</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Functional</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Object-oriented</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Logic</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Imperative</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Object-oriented<p>Objects combine attributes and methods.</p></div></article>
+<article class="question mcq" data-correct="0"><div class="qhead"><span class="number">Q2</span><strong>Which paradigm primarily uses facts, rules and queries?</strong><span class="week">W1</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Logic</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Object-oriented</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Imperative</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Parallel</button>
+</div><div class="answer hidden"><b>Answer: A.</b> Logic<p>Logic programming uses rules and facts to answer queries.</p></div></article>
+<article class="question mcq" data-correct="2"><div class="qhead"><span class="number">Q3</span><strong>Which paradigm uses instructions that change program state?</strong><span class="week">W1</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Functional</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Logic</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Imperative</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Declarative</button>
+</div><div class="answer hidden"><b>Answer: C.</b> Imperative<p>Imperative programs specify steps that update state.</p></div></article>
+<article class="question mcq" data-correct="0"><div class="qhead"><span class="number">Q4</span><strong>Which paradigm emphasises functions and expression evaluation?</strong><span class="week">W1</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Functional</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Object-oriented</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Imperative</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Logic</button>
+</div><div class="answer hidden"><b>Answer: A.</b> Functional<p>Functional programming expresses computation using functions.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q5</span><strong>Which paradigm uses classes, inheritance and encapsulation?</strong><span class="week">W1</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Logic</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Object-oriented</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Functional</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Bottom-up</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Object-oriented<p>These are central object-oriented concepts.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q6</span><strong>What is the main purpose of a compiler?</strong><span class="week">W2</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Execute each statement directly</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Translate source code into target code</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Store program variables</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Manage concurrent processes</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Translate source code into target code<p>A compiler translates source code to another representation.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q7</span><strong>Which criterion describes how easily code can be understood?</strong><span class="week">W2</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Reliability</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Readability</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Portability</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Cost</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Readability<p>Readability concerns understanding and maintaining code.</p></div></article>
+<article class="question mcq" data-correct="0"><div class="qhead"><span class="number">Q8</span><strong>Which criterion concerns how easily programs can be written?</strong><span class="week">W2</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Writability</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Reliability</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Speed</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Conversion</button>
+</div><div class="answer hidden"><b>Answer: A.</b> Writability<p>Writability describes ease of expressing a solution.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q9</span><strong>What is the purpose of formal grammar?</strong><span class="week">W2</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Execute programs</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Define valid syntactic structures</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Allocate memory</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Handle exceptions</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Define valid syntactic structures<p>Grammar specifies how valid language constructs are formed.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q10</span><strong>What describes the meaning of a programming statement?</strong><span class="week">W2</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Syntax</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Semantics</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Grammar</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Token</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Semantics<p>Semantics is meaning; syntax is structure.</p></div></article>
+<article class="question mcq" data-correct="2"><div class="qhead"><span class="number">Q11</span><strong>Which Scheme expression returns the first element?</strong><span class="week">W3</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> cdr</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> cons</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> car</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> let</button>
+</div><div class="answer hidden"><b>Answer: C.</b> car<p>car returns the first element of a nonempty list.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q12</span><strong>What is (car '(5 10 15))?</strong><span class="week">W3</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> (10 15)</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> 5</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> 15</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> (5 10)</button>
+</div><div class="answer hidden"><b>Answer: B.</b> 5<p>The first list element is 5.</p></div></article>
+<article class="question mcq" data-correct="2"><div class="qhead"><span class="number">Q13</span><strong>What is (cdr '(5 10 15))?</strong><span class="week">W3</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> 5</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> (5)</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> (10 15)</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> (15)</button>
+</div><div class="answer hidden"><b>Answer: C.</b> (10 15)<p>cdr returns the list after the first element.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q14</span><strong>What is (cons 2 '(4 6 8))?</strong><span class="week">W3</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> (4 6 8 2)</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> (2 4 6 8)</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> (2)</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> (4 6 8)</button>
+</div><div class="answer hidden"><b>Answer: B.</b> (2 4 6 8)<p>cons adds 2 to the front of the list.</p></div></article>
+<article class="question mcq" data-correct="2"><div class="qhead"><span class="number">Q15</span><strong>For distinct BST keys, which ordering rule holds?</strong><span class="week">W3</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Left descendants greater</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Right descendants smaller</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Left smaller, right greater</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Every node has two children</button>
+</div><div class="answer hidden"><b>Answer: C.</b> Left smaller, right greater<p>BST ordering applies to entire left and right subtrees.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q16</span><strong>What does variable binding mean?</strong><span class="week">W4</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Deleting a variable</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Associating a name with an entity</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Converting to a function</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Calling recursion</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Associating a name with an entity<p>Binding connects a name to an entity such as a value.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q17</span><strong>What correctly describes lexical scoping?</strong><span class="week">W4</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Search calling function</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Resolve names by textual definition structure</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> All variables global</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Values never change</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Resolve names by textual definition structure<p>Lexical scoping follows the source code structure.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q18</span><strong>A variable declared inside a function is usually called?</strong><span class="week">W4</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Global</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Local</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Constant expression</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Callback</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Local<p>Local variables are accessible within their scope.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q19</span><strong>A free variable in an expression is one that?</strong><span class="week">W4</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Has no value</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Is not bound within that expression</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Must be global</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Cannot change</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Is not bound within that expression<p>Its binding comes from outside the expression.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q20</span><strong>What is concurrency?</strong><span class="week">W4</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Only one instruction</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Overlapping progress of multiple tasks</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Type conversion</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Replacing functions</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Overlapping progress of multiple tasks<p>Concurrent tasks can overlap in execution.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q21</span><strong>What is int("12") + 3 in Python?</strong><span class="week">W5</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> "123"</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> 15</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> 12</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> TypeError</button>
+</div><div class="answer hidden"><b>Answer: B.</b> 15<p>int converts the string before addition.</p></div></article>
+<article class="question mcq" data-correct="2"><div class="qhead"><span class="number">Q22</span><strong>Which OOP concept lets a child reuse parent methods?</strong><span class="week">W5</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Encapsulation</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Abstraction</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Inheritance</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Inference</button>
+</div><div class="answer hidden"><b>Answer: C.</b> Inheritance<p>Inheritance provides reuse of parent behaviour.</p></div></article>
+<article class="question mcq" data-correct="2"><div class="qhead"><span class="number">Q23</span><strong>Which language commonly uses dynamic type checking?</strong><span class="week">W5</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Java</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> C</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Python</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> C++</button>
+</div><div class="answer hidden"><b>Answer: C.</b> Python<p>Python checks operand compatibility at runtime.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q24</span><strong>What is explicit type conversion?</strong><span class="week">W5</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Automatic conversion</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Conversion using int() or similar</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Creating a class</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Calling an overload</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Conversion using int() or similar<p>The programmer requests the conversion explicitly.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q25</span><strong>What lets a child class redefine a parent method?</strong><span class="week">W5</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Overloading</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Overriding</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Coercion</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Inference</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Overriding<p>Overriding supplies a child-specific implementation.</p></div></article>
+<article class="question mcq" data-correct="0"><div class="qhead"><span class="number">Q26</span><strong>What is function overloading?</strong><span class="week">W5</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Same name with different parameter lists</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Deleting a function</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Recursion</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Function to variable</button>
+</div><div class="answer hidden"><b>Answer: A.</b> Same name with different parameter lists<p>Overloading distinguishes methods by signatures.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q27</span><strong>What does type inference mean?</strong><span class="week">W5</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Every type declared</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Type deduced from expression/context</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Types never checked</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> All strings</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Type deduced from expression/context<p>The language infers a type without explicit annotation.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q28</span><strong>What is the AST root for 2 + 3 * 4?</strong><span class="week">W6</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> *</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> +</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> 2</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> 4</button>
+</div><div class="answer hidden"><b>Answer: B.</b> +<p>Multiplication groups as a right subtree of addition.</p></div></article>
+<article class="question mcq" data-correct="2"><div class="qhead"><span class="number">Q29</span><strong>Which is an aggregate data type?</strong><span class="week">W6</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Single integer</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Boolean</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> List of integers</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Character</button>
+</div><div class="answer hidden"><b>Answer: C.</b> List of integers<p>An aggregate groups multiple values.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q30</span><strong>What is data abstraction?</strong><span class="week">W6</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Expose all details</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Hide implementation behind operations</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Eliminate functions</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Convert to strings</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Hide implementation behind operations<p>Users work with an interface rather than internal storage.</p></div></article>
+<article class="question mcq" data-correct="0"><div class="qhead"><span class="number">Q31</span><strong>Which operation adds an element to a stack?</strong><span class="week">W6</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> push</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> pop</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> peek</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> search</button>
+</div><div class="answer hidden"><b>Answer: A.</b> push<p>push inserts a new top item.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q32</span><strong>What must terminating recursion have?</strong><span class="week">W7</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Global variable</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Base case and progress towards it</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Constructor</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Overload</button>
+</div><div class="answer hidden"><b>Answer: B.</b> Base case and progress towards it<p>A base case ends recursive calls.</p></div></article>
+<article class="question mcq" data-correct="0"><div class="qhead"><span class="number">Q33</span><strong>What is let for in Scheme?</strong><span class="week">W7</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> Local bindings</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> Termination</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> Classes</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> Compilers</button>
+</div><div class="answer hidden"><b>Answer: A.</b> Local bindings<p>let introduces names within a local body.</p></div></article>
+<article class="question mcq" data-correct="2"><div class="qhead"><span class="number">Q34</span><strong>What does (if (&gt; 5 3) 10 20) return?</strong><span class="week">W7</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> 5</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> 3</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> 10</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> 20</button>
+</div><div class="answer hidden"><b>Answer: C.</b> 10<p>The true branch returns 10.</p></div></article>
+<article class="question mcq" data-correct="1"><div class="qhead"><span class="number">Q35</span><strong>What is factorial of 3?</strong><span class="week">W7</span></div><div class="options">
+<button class="opt" onclick="choose(this,0)"><b>A.</b> 3</button>
+<button class="opt" onclick="choose(this,1)"><b>B.</b> 6</button>
+<button class="opt" onclick="choose(this,2)"><b>C.</b> 9</button>
+<button class="opt" onclick="choose(this,3)"><b>D.</b> 12</button>
+</div><div class="answer hidden"><b>Answer: B.</b> 6<p>3 × 2 × 1 = 6.</p></div></article>
+<h2 id="B">Section B – Code Analysis and Problem Solving</h2><p class="subtle">Try the question first. Open the model answer to review the result and the concept.</p>
+<article class="question written"><div class="qhead"><span class="number">Q1</span><h3 style="margin:0">Binding Techniques</h3><span class="week">B</span></div>
+<pre><code># DEFINE
+x = 10
+y = 20
+def calculate():
+    print(x + y)
 
+# EXECUTE
+def execute(func):
+    x = 50
+    y = 60
+    func()
+
+# PASS
+x = 30
+y = 40
+execute(calculate)</code></pre>
+<p><b>Question:</b> Identify the callback; give ad-hoc (DEFINE), deep (PASS) and shallow (EXECUTE) conceptual outputs; explain the actual Python output.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Callback:</strong> <code>calculate</code>, because it is passed as the argument <code>func</code> and then invoked by <code>func()</code>.</p><table><tr><th>Conceptual technique</th><th>Environment</th><th>Calculation</th><th>Result</th></tr><tr><td>Ad-hoc</td><td>DEFINE: x=10, y=20</td><td>10+20</td><td><strong>30</strong></td></tr><tr><td>Deep</td><td>PASS: x=30, y=40</td><td>30+40</td><td><strong>70</strong></td></tr><tr><td>Shallow</td><td>EXECUTE: x=50, y=60</td><td>50+60</td><td><strong>110</strong></td></tr></table><p><strong>Actual Python output:</strong> <code>70</code>.</p><ol><li>At definition, the function body refers to names <code>x</code> and <code>y</code>, but does not freeze their values.</li><li>Before calling <code>execute</code>, the global names are reassigned to 30 and 40.</li><li>The local x=50 and y=60 inside <code>execute</code> belong only to that function's local scope.</li><li><code>calculate()</code> resolves x and y in its global scope and prints 70.</li></ol><p><em>Teaching convention:</em> DEFINE/PASS/EXECUTE are conceptual environments used to compare binding strategies; Python does not offer three switchable binding modes.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Binding techniques select an environment for resolving variables in the conceptual comparison. Python uses lexical scoping, so calculate reads the reassigned global values rather than execute’s local values.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q2</span><h3 style="margin:0">Local Binding and Conditional Evaluation</h3><span class="week">B</span></div>
+<pre><code>(let ((x 5))
+  (let ((x 10))
+    (if (&gt; x 7) (+ x 3) (- x 3))))</code></pre>
+<p><b>Question:</b> Identify the x used, evaluate the expression and explain shadowing.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Answer:</strong> The <code>if</code> uses <code>x = 10</code>; the expression evaluates to <strong>13</strong>.</p><ol><li>Outer <code>let</code> introduces x=5.</li><li>Inner <code>let</code> introduces a new x=10 that shadows x=5.</li><li><code>(&gt; 10 7)</code> is true, so evaluate <code>(+ 10 3)</code>.</li><li>The final value is <code>13</code>.</li></ol><p><strong>Shadowing:</strong> The outer x still exists, but is hidden within the inner scope.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Local binding creates a name within a limited scope. A nested binding with the same name hides the outer one within that nested expression.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q3</span><h3 style="margin:0">Recursive Factorial</h3><span class="week">B</span></div>
+<pre><code>(define (fact n)
+  (if (= n 0) 1 (* n (fact (- n 1)))))
+(fact 4)</code></pre>
+<p><b>Question:</b> Identify the base case, trace calls and find the result.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Base case:</strong> <code>(= n 0)</code> returns <code>1</code>.</p><pre><code>(fact 4)
+= 4 * (fact 3)
+= 4 * 3 * (fact 2)
+= 4 * 3 * 2 * (fact 1)
+= 4 * 3 * 2 * 1 * (fact 0)
+= 4 * 3 * 2 * 1 * 1
+= 24</code></pre><p><strong>Answer:</strong> <code>24</code>. Calls go down to n=0; multiplication happens as calls return.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Recursion solves a smaller version of the same problem on each call. The base case stops the calls and permits the result to be calculated.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q4</span><h3 style="margin:0">Type Conversion and Type Checking</h3><span class="week">B</span></div>
+<pre><code>x = "15"
+y = 5
+result = int(x) + y
+print(result)
+a = 10
+b = "20"
+print(a + b)</code></pre>
+<p><b>Question:</b> Find the first output, identify the second error and correct the final statement.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>First output:</strong> <code>20</code>, because <code>int("15")</code> converts the string into integer 15, then adds 5.</p><p><strong>Second statement:</strong> <code>print(a + b)</code> raises <code>TypeError</code> because <code>a</code> is an integer and <code>b</code> is a string.</p><p><strong>Correction:</strong></p><pre><code>print(a + int(b))   # 30</code></pre><p><strong>Important:</strong> In the original program the error stops execution after the first printed line unless an exception handler is used.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Explicit conversion changes a value to a requested type. Python checks the validity of operations using operand types at runtime.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q5</span><h3 style="margin:0">BST Construction and Insertion</h3><span class="week">B</span></div>
+<p><b>Question:</b> Insert 50, 30, 70, 20, 40, 60, 80 into a BST, then insert 35 and 65 and redraw.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Step 1 – Initial insertion:</strong> 50 becomes root; 30 goes left and 70 right. Insert 20 left of 30, 40 right of 30, 60 left of 70, and 80 right of 70.</p><pre><code>          50
+        /    \
+      30      70
+     /  \    /  \
+   20   40  60   80</code></pre><p><strong>Step 2 – Insert 35:</strong> 35&lt;50 → left; 35&gt;30 → right; 35&lt;40 → left of 40.</p><p><strong>Step 3 – Insert 65:</strong> 65&gt;50 → right; 65&lt;70 → left; 65&gt;60 → right of 60.</p><p><strong>Final BST (new nodes marked *):</strong></p><pre><code>          50
+        /    \
+      30      70
+     /  \    /  \
+   20   40  60   80
+       /      \
+     35*      65*</code></pre></div><div class="concept"><b>Concept explained in two sentences</b><p>A BST places smaller keys in the left subtree and larger keys in the right subtree. Insertion compares keys from the root until an empty child position is found.</p></div>
+<svg aria-label="Final binary search tree with inserted 35 and 65" class="diagram" role="img" viewbox="0 0 340 245"><g stroke="#7894ac" stroke-width="2">
+<line x1="170" x2="90" y1="28" y2="83"></line>
+<line x1="170" x2="250" y1="28" y2="83"></line>
+<line x1="90" x2="45" y1="83" y2="144"></line>
+<line x1="90" x2="135" y1="83" y2="144"></line>
+<line x1="250" x2="205" y1="83" y2="144"></line>
+<line x1="250" x2="295" y1="83" y2="144"></line>
+<line x1="135" x2="110" y1="144" y2="211"></line>
+<line x1="205" x2="230" y1="144" y2="211"></line>
+</g>
+<circle cx="170" cy="28" fill="#dbeafe" r="21" stroke="#2563eb" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="170" y="33">50</text>
+<circle cx="90" cy="83" fill="#dbeafe" r="21" stroke="#2563eb" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="90" y="88">30</text>
+<circle cx="250" cy="83" fill="#dbeafe" r="21" stroke="#2563eb" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="250" y="88">70</text>
+<circle cx="45" cy="144" fill="#dbeafe" r="21" stroke="#2563eb" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="45" y="149">20</text>
+<circle cx="135" cy="144" fill="#dbeafe" r="21" stroke="#2563eb" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="135" y="149">40</text>
+<circle cx="205" cy="144" fill="#dbeafe" r="21" stroke="#2563eb" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="205" y="149">60</text>
+<circle cx="295" cy="144" fill="#dbeafe" r="21" stroke="#2563eb" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="295" y="149">80</text>
+<circle cx="110" cy="211" fill="#dcfce7" r="21" stroke="#15803d" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="110" y="216">35</text>
+<circle cx="230" cy="211" fill="#dcfce7" r="21" stroke="#15803d" stroke-width="2"></circle><text fill="#172554" font-size="14" font-weight="700" text-anchor="middle" x="230" y="216">65</text>
+</svg><p class="subtle">Green nodes: newly inserted values.</p>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q6</span><h3 style="margin:0">Additional BST Practice 1</h3><span class="week">B</span></div>
+<p><b>Question:</b> Construct a BST from 40, 20, 60, 10, 30, 50, 70; insert 25 and 55.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Step 1 – Build the original BST:</strong> 40 is root; 20 and 60 are its children. The next values 10, 30, 50 and 70 occupy the left/right positions shown below.</p><pre><code>          40
+        /    \
+      20      60
+     /  \    /  \
+   10   30  50   70</code></pre><p><strong>Step 2 – Insert 25:</strong> 25&lt;40 → left to 20; 25&gt;20 → right to 30; 25&lt;30 → insert as left child of 30.</p><p><strong>Step 3 – Insert 55:</strong> 55&gt;40 → right to 60; 55&lt;60 → left to 50; 55&gt;50 → insert as right child of 50.</p><p><strong>Final BST (* = inserted node):</strong></p><pre><code>          40
+        /    \
+      20      60
+     /  \    /  \
+   10   30  50   70
+       /      \
+     25*      55*</code></pre></div><div class="concept"><b>Concept explained in two sentences</b><p>An ordinary BST inserts values without rearranging existing nodes. Every new key follows smaller-left and larger-right comparisons.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q7</span><h3 style="margin:0">Additional BST Practice 2</h3><span class="week">B</span></div>
+<p><b>Question:</b> Construct a BST from 45, 25, 65, 15, 35, 55, 75; insert 30 and 60.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Step 1 – Build the original BST:</strong> Insert 45 as root, 25 on the left and 65 on the right; then place 15 and 35 under 25, and 55 and 75 under 65.</p><pre><code>          45
+        /    \
+      25      65
+     /  \    /  \
+   15   35  55   75</code></pre><p><strong>Step 2 – Insert 30:</strong> 30&lt;45 (left), 30&gt;25 (right), 30&lt;35 (left); add 30 as the left child of 35.</p><p><strong>Step 3 – Insert 60:</strong> 60&gt;45 (right), 60&lt;65 (left), 60&gt;55 (right); add 60 as the right child of 55.</p><p><strong>Final BST (* = newly inserted):</strong></p><pre><code>          45
+        /    \
+      25      65
+     /  \    /  \
+   15   35  55   75
+       /      \
+     30*      60*</code></pre><p><strong>Check:</strong> Every node's left subtree contains smaller values and its right subtree contains larger values.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>BST insertion follows a comparison path from the root. The inserted value becomes a child at the first empty position on that path.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q8</span><h3 style="margin:0">Scheme List Operations</h3><span class="week">B</span></div>
+<pre><code>(define numbers '(2 4 6 8))
+(display (car numbers))
+(newline)
+(display (cdr numbers))
+(newline)
+(display (cons 0 numbers))</code></pre>
+<p><b>Question:</b> Write the three outputs and explain car, cdr and cons.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Exact displayed output:</strong></p><pre><code>2
+(4 6 8)
+(0 2 4 6 8)</code></pre><ol><li><code>car</code> returns the first element, 2.</li><li><code>cdr</code> returns everything after the first element: (4 6 8).</li><li><code>cons</code> constructs a new list with 0 at the front; the original list remains unchanged.</li></ol></div><div class="concept"><b>Concept explained in two sentences</b><p>car retrieves the first element and cdr retrieves the remaining list. cons constructs a pair and prepends an element when the second argument is a list.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q9</span><h3 style="margin:0">Nested LISP Expressions</h3><span class="week">B</span></div>
+<pre><code>(car (cdr '(10 20 30 40)))
+(car (cdr (cdr '(5 10 15 20))))
+(cons 1 (cdr '(3 6 9)))</code></pre>
+<p><b>Question:</b> Evaluate each expression.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><table><tr><th>Expression</th><th>Evaluation</th><th>Answer</th></tr><tr><td>(a)</td><td>cdr → (20 30 40); car → first</td><td><code>20</code></td></tr><tr><td>(b)</td><td>cdr → (10 15 20); cdr → (15 20); car → first</td><td><code>15</code></td></tr><tr><td>(c)</td><td>cdr → (6 9); cons 1 onto it</td><td><code>(1 6 9)</code></td></tr></table><p><strong>Tip:</strong> Start evaluating the innermost list operation, then work outward.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Nested LISP expressions evaluate their inner operations before outer ones. Combining car, cdr and cons makes it possible to select and construct list structures.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q10</span><h3 style="margin:0">Local Binding</h3><span class="week">B</span></div>
+<pre><code>(let ((a 4) (b 6))
+  (+ (* a 2) b))</code></pre>
+<p><b>Question:</b> Identify local variables, compute the result and explain their scope.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Local bindings:</strong> <code>a = 4</code>, <code>b = 6</code>.</p><ol><li>Compute <code>(* a 2)</code> = 4×2 = 8.</li><li>Compute <code>(+ 8 b)</code> = 8+6 = <strong>14</strong>.</li></ol><p>The names a and b are available in the body of this <code>let</code>, not automatically outside it.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>let creates bindings available within its body. The names are not available outside that expression unless separately defined.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q11</span><h3 style="margin:0">Conditional Evaluation</h3><span class="week">B</span></div>
+<pre><code>(define (check n)
+  (cond ((&gt; n 10) 'large)
+        ((= n 10) 'equal)
+        (else 'small)))
+(check 7)</code></pre>
+<p><b>Question:</b> Find the selected branch, the result and the result of (check 15).</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>(check 7):</strong> 7&gt;10 is false; 7=10 is false; <code>else</code> returns <code>small</code>.</p><p><strong>(check 15):</strong> 15&gt;10 is true; the first branch returns <code>large</code>, so later branches are skipped.</p><p><strong>Extra check:</strong> <code>(check 10)</code> returns <code>equal</code>.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>cond checks clauses in order and evaluates the result of the first true condition. else supplies a default when earlier conditions fail.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q12</span><h3 style="margin:0">Recursive Sum</h3><span class="week">B</span></div>
+<pre><code>(define (sum n)
+  (if (= n 0) 0 (+ n (sum (- n 1)))))
+(sum 4)</code></pre>
+<p><b>Question:</b> Identify the base case, trace calls and calculate the result.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Base case:</strong> when n=0, return 0.</p><pre><code>(sum 4)
+= 4 + (sum 3)
+= 4 + 3 + (sum 2)
+= 4 + 3 + 2 + (sum 1)
+= 4 + 3 + 2 + 1 + (sum 0)
+= 4 + 3 + 2 + 1 + 0
+= 10</code></pre><p><strong>Final result:</strong> <code>10</code>.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>The function repeatedly reduces its argument by one. Its base case prevents infinite recursion and supplies the initial return value.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q13</span><h3 style="margin:0">Function Overriding</h3><span class="week">B</span></div>
+<pre><code>class Animal:
+    def sound(self): print("Animal sound")
+class Cat(Animal):
+    def sound(self): print("Meow")
+animal = Animal()
+cat = Cat()
+animal.sound()
+cat.sound()</code></pre>
+<p><b>Question:</b> Write both outputs, identify the overridden method and explain the difference.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Exact output:</strong></p><pre><code>Animal sound
+Meow</code></pre><ol><li><code>animal</code> is an <code>Animal</code> object, so it runs <code>Animal.sound()</code>.</li><li><code>cat</code> is a <code>Cat</code> object, so it runs the overridden <code>Cat.sound()</code>.</li></ol><p><strong>Overridden method:</strong> <code>sound()</code>. Inheritance lets Cat reuse Animal behaviour, while overriding changes this specific method.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Overriding lets a child class replace an inherited method. The implementation used depends on the object receiving the call.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q14</span><h3 style="margin:0">AST with Parentheses</h3><span class="week">B</span></div>
+<p><b>Question:</b> Draw the AST for (5 + 2) * 3 and identify its root.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Expression:</strong> <code>(5 + 2) * 3</code>.</p><pre><code>       *
+      / \
+     +   3
+    / \
+   5   2</code></pre><ol><li>Parentheses group <code>5+2</code> as one subtree.</li><li>The outermost operation is multiplication, so <code>*</code> is the root.</li><li>The left subtree evaluates to 7, then 7×3 = <strong>21</strong>.</li></ol></div><div class="concept"><b>Concept explained in two sentences</b><p>An AST records operators and their operands in a tree. Parentheses cause addition to be grouped before multiplication.</p></div>
+<pre>       *
+      / \
+     +   3
+    / \
+   5   2</pre>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q15</span><h3 style="margin:0">AST with Precedence</h3><span class="week">B</span></div>
+<p><b>Question:</b> Draw the AST for 8 - 2 * 3 + 1.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Expression:</strong> <code>8 - 2 * 3 + 1</code>.</p><pre><code>        +
+       / \
+      -   1
+     / \
+    8   *
+       / \
+      2   3</code></pre><ol><li>Multiplication has higher precedence: <code>2*3 = 6</code>.</li><li>Subtraction and addition have equal precedence and are evaluated left-to-right: <code>(8-6)+1</code>.</li><li>Therefore <code>+</code> is the root, its left child is <code>-</code>, and the result is <strong>3</strong>.</li></ol></div><div class="concept"><b>Concept explained in two sentences</b><p>Multiplication has higher precedence than addition and subtraction. Addition and subtraction are left-associative, giving (8 - (2 * 3)) + 1.</p></div>
+<pre>        +
+       / \
+      -   1
+     / \
+    8   *
+       / \
+      2   3</pre>
+</div></article>
+<h2 id="C">Section C – Short-Answer Questions</h2><p class="subtle">Try the question first. Open the model answer to review the result and the concept.</p>
+<article class="question written"><div class="qhead"><span class="number">Q16</span><h3 style="margin:0">Programming Paradigms</h3><span class="week">C</span></div>
+<p><b>Question:</b> Explain imperative and OOP approaches, then compare them for a student management system.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>(a) Imperative:</strong> A program states the sequence of commands that update its state, for example storing marks in variables and updating totals.</p><p><strong>(b) Object-oriented:</strong> A program groups related data and methods into objects, such as a <code>Student</code> with a name, marks and a <code>calculateGrade()</code> method.</p><p><strong>(c) Comparison:</strong> In an imperative design, student records and the functions that process them can be separate; in OOP, each Student object groups its data and associated methods.</p><pre><code># Imperative-style example
+marks = 80
+marks = marks + 5
+
+# Object-oriented example
+class Student:
+    def __init__(self, marks):
+        self.marks = marks
+    def add_bonus(self, points):
+        self.marks += points</code></pre></div><div class="concept"><b>Concept explained in two sentences</b><p>Paradigms provide different ways to organise program logic and data. The chosen paradigm influences maintainability and how code is reused.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q17</span><h3 style="margin:0">Type Checking, Overloading and Overriding</h3><span class="week">C</span></div>
+<p><b>Question:</b> Explain static versus dynamic checking, overloading and overriding.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>(a) Type checking:</strong> Static checking examines type correctness before program execution (for example, Java compilation). Dynamic checking verifies types when operations run (for example, Python raising a TypeError for <code>10 + "20"</code>).</p><p><strong>(b) Overloading:</strong> Same method name, different parameter signatures, such as Java <code>add(int,int)</code> and <code>add(int,int,int)</code>.</p><p><strong>(c) Overriding:</strong> A subclass replaces the implementation of an inherited method, such as <code>Dog.sound()</code> printing <code>Bark</code> instead of <code>Animal sound</code>.</p><pre><code>// Java overloading
+int add(int a, int b) { return a+b; }
+int add(int a, int b, int c) { return a+b+c; }</code></pre><pre><code># Python overriding
+class Animal:
+    def sound(self): print("Animal sound")
+class Dog(Animal):
+    def sound(self): print("Bark")
+Dog().sound()  # Bark</code></pre></div><div class="concept"><b>Concept explained in two sentences</b><p>Type checking helps detect invalid operations. Overloading and overriding support different kinds of polymorphic behaviour.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q18</span><h3 style="margin:0">Aggregate Data Types, AST and Abstraction</h3><span class="week">C</span></div>
+<p><b>Question:</b> Explain an aggregate type, draw the AST for 2 + 3 * 4, and explain stack abstraction.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>(a) Aggregate type:</strong> A collection of multiple values represented together, for example Python <code>[10, 20, 30]</code>.</p><p><strong>(b) AST for <code>2 + 3 * 4</code>:</strong></p><pre><code>      +
+     / \
+    2   *
+       / \
+      3   4</code></pre><p>Multiplication has higher precedence, so <code>*</code> is below <code>+</code>; expression value is <strong>14</strong>.</p><p><strong>(c) Stack abstraction:</strong> A stack offers operations such as <code>push</code>, <code>pop</code> and <code>peek</code> while hiding whether its internal storage uses an array or linked list. Users interact with the operations, not the representation.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Aggregates organise related values and ASTs express program structure. Data abstraction provides useful operations without exposing their implementation.</p></div>
+<pre>       +
+      / \
+     2   *
+        / \
+       3   4</pre>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q19</span><h3 style="margin:0">Language Evaluation</h3><span class="week">C</span></div>
+<p><b>Question:</b> Define readability, writability and reliability.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Readability:</strong> How easily a programmer can understand source code; clear names and simple control structures improve it.</p><p><strong>Writability:</strong> How easily programmers can express solutions; suitable abstractions and libraries can reduce code complexity.</p><p><strong>Reliability:</strong> How consistently a program behaves correctly under its specified conditions; strong error handling and type checking can help.</p><p><strong>Example:</strong> A banking application values reliability because incorrect calculations can cause financial loss.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Language evaluation criteria describe qualities important to software development. They help compare language suitability for a task.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q20</span><h3 style="margin:0">Syntax and Semantics</h3><span class="week">C</span></div>
+<p><b>Question:</b> Define syntax and semantics and provide an example.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Syntax:</strong> The grammar and structural rules for valid code.</p><p><strong>Semantics:</strong> The meaning or behaviour of valid code.</p><pre><code>x = 5 + 3   # Valid Python syntax; assigns 8 to x
+print(x)   # Displays 8</code></pre><p><strong>Contrast:</strong> <code>x = (5 +</code> is a syntax error because the expression is incomplete. <code>x = 5 / 0</code> is syntactically valid Python but raises a runtime error.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Syntax concerns whether code follows grammatical rules. Semantics concerns what that code means when evaluated.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q21</span><h3 style="margin:0">Scope and Binding</h3><span class="week">C</span></div>
+<p><b>Question:</b> Explain local scope, global scope and lexical scoping.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Local scope:</strong> A name introduced within a function is normally available only there.</p><p><strong>Global scope:</strong> A module-level name can be accessed by functions according to the language's name-resolution rules.</p><p><strong>Lexical scope:</strong> A function resolves free names from the enclosing scopes where it was defined, not from unrelated local variables in its caller.</p><pre><code>x = 10  # global
+def show():
+    x = 20  # local; shadows global x
+    print(x)
+show()   # 20
+print(x) # 10</code></pre></div><div class="concept"><b>Concept explained in two sentences</b><p>Scope specifies where a name can be accessed. Lexical scoping uses source-code nesting rather than the caller’s local variables.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q22</span><h3 style="margin:0">Free and Bound Variables</h3><span class="week">C</span></div>
+<pre><code>(lambda (x) (+ x y))</code></pre>
+<p><b>Question:</b> Define free/bound variables and identify them in the expression.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Expression:</strong> <code>(lambda (x) (+ x y))</code>.</p><p><strong>Bound variable:</strong> <code>x</code>, because the lambda parameter binds x inside the body.</p><p><strong>Free variable:</strong> <code>y</code>, because this lambda expression does not define y.</p><p><strong>Important:</strong> y may be resolved from an enclosing scope; being free in this expression does not necessarily mean it is undefined in the whole program.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>A bound variable is introduced by a binding construct. A free variable must be resolved from an enclosing environment.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q23</span><h3 style="margin:0">Functional Programming</h3><span class="week">C</span></div>
+<p><b>Question:</b> Explain functional programming, recursion and a base case.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>(a) Functional programming:</strong> Programs are expressed using functions and expression evaluation, often emphasising immutable data and composition.</p><p><strong>(b) Recursion:</strong> A function calls itself with a smaller input, for example <code>fact(3)</code> calling <code>fact(2)</code>.</p><p><strong>(c) Base case:</strong> A stopping rule such as <code>fact(0)=1</code>; without reaching it, recursive calls can continue indefinitely or exhaust the call stack.</p><pre><code>(define (fact n)
+  (if (= n 0) 1 (* n (fact (- n 1)))))</code></pre></div><div class="concept"><b>Concept explained in two sentences</b><p>Functional code can build solutions by composing and evaluating functions. Recursion needs a stopping condition and progress towards it.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q24</span><h3 style="margin:0">Data Types</h3><span class="week">C</span></div>
+<p><b>Question:</b> Explain aggregate, inductive and variant data types.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>(a) Aggregate type:</strong> Combines multiple values, for example a record with a student's name and marks or a list of scores.</p><p><strong>(b) Inductive type:</strong> Defined with base constructors and recursive constructors; a linked list is either empty or a node containing an element and another list.</p><p><strong>(c) Variant record:</strong> Stores one of several alternatives, usually identified by a tag; for example a <code>Shape</code> can be a <code>Circle(radius)</code> or <code>Rectangle(width,height)</code>.</p><p><strong>Comparison:</strong> Aggregates group fields, inductive types define recursively structured values, and variants express choices between possible forms.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Data types provide structures for representing information. Their rules determine how values are built and used.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q25</span><h3 style="margin:0">Software Engineering and Concurrency</h3><span class="week">C</span></div>
+<p><b>Question:</b> Why does language design matter? Define concurrency and compare it with sequential execution.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>(a) Language design:</strong> Clear syntax, good abstractions and predictable semantics improve maintainability and reduce programming mistakes.</p><p><strong>(b) Concurrency:</strong> Multiple tasks make progress during overlapping periods, even if they share a single processor.</p><p><strong>(c) Sequential vs concurrent:</strong> Sequential tasks run one after another; concurrent tasks can interleave or run in parallel depending on the system.</p><p><strong>Example:</strong> A server can handle multiple client requests concurrently rather than completing every request before starting the next.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Good language design helps programmers build dependable software. Concurrency enables overlapping task progress without necessarily requiring simultaneous execution.</p></div>
+</div></article>
+<h2 id="D">Section D – Bonus LISP / Scheme Practice</h2><p class="subtle">Try the question first. Open the model answer to review the result and the concept.</p>
+<article class="question written"><div class="qhead"><span class="number">Q26</span><h3 style="margin:0">LISP List Operations</h3><span class="week">D</span></div>
+<pre><code>(define numbers '(10 20 30 40))
+(display (car numbers))
+(newline)
+(display (cdr numbers))
+(newline)
+(display (cons 5 numbers))</code></pre>
+<p><b>Question:</b> Write three outputs and explain car, cdr and cons.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Displayed output:</strong></p><pre><code>10
+(20 30 40)
+(5 10 20 30 40)</code></pre><p><strong>(a)</strong> <code>car</code> returns 10, the first element.</p><p><strong>(b)</strong> <code>cdr</code> returns (20 30 40), the remaining list.</p><p><strong>(c)</strong> <code>cons</code> adds 5 to the front of the list, producing (5 10 20 30 40).</p><p><strong>(d)</strong> car accesses the first item; cdr accesses the rest; cons constructs a new pair/list cell.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>car retrieves the first element and cdr retrieves the rest of a list. cons creates a pair, which prepends an element when given a list as its second argument.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q27</span><h3 style="margin:0">Nested LISP Operations</h3><span class="week">D</span></div>
+<pre><code>(car (cdr '(1 2 3 4 5)))
+(cdr (cdr '(1 2 3 4 5)))
+(cons 10 (cons 20 '(30 40)))</code></pre>
+<p><b>Question:</b> Evaluate all three expressions.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>(a)</strong> <code>(car (cdr '(1 2 3 4 5)))</code>: cdr → (2 3 4 5); car → <strong>2</strong>.</p><p><strong>(b)</strong> <code>(cdr (cdr '(1 2 3 4 5)))</code>: first cdr → (2 3 4 5); second cdr → <strong>(3 4 5)</strong>.</p><p><strong>(c)</strong> <code>(cons 10 (cons 20 '(30 40)))</code>: inner cons → (20 30 40); outer cons → <strong>(10 20 30 40)</strong>.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Nested operations are evaluated from inside outward. car, cdr and cons can be combined to select and build lists.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q28</span><h3 style="margin:0">LISP Function Evaluation</h3><span class="week">D</span></div>
+<pre><code>(define (square x) (* x x))
+(define (calculate a b)
+  (+ (square a) (square b)))
+(calculate 3 4)</code></pre>
+<p><b>Question:</b> Explain square, trace the calls and calculate the result.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Purpose of <code>square</code>:</strong> Return the product of a number with itself.</p><ol><li><code>(calculate 3 4)</code> calls <code>(square 3)</code>, which returns 9.</li><li>It calls <code>(square 4)</code>, which returns 16.</li><li>The <code>+</code> operation adds 9 and 16.</li></ol><p><strong>Final result:</strong> <code>25</code>.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>Functions can call other functions to build more complex computations. Small reusable functions improve code organisation.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q29</span><h3 style="margin:0">Scheme Recursion</h3><span class="week">D</span></div>
+<pre><code>(define (power2 n)
+  (if (= n 0) 1 (* 2 (power2 (- n 1)))))
+(power2 4)</code></pre>
+<p><b>Question:</b> Identify the base case, trace calls and find the result.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Base case:</strong> When <code>n = 0</code>, return <code>1</code>.</p><pre><code>(power2 4)
+= 2 * (power2 3)
+= 2 * 2 * (power2 2)
+= 2 * 2 * 2 * (power2 1)
+= 2 * 2 * 2 * 2 * (power2 0)
+= 2 * 2 * 2 * 2 * 1
+= 16</code></pre><p><strong>Final result:</strong> <code>16</code>. The function computes 2 to the power of n for nonnegative integers.</p></div><div class="concept"><b>Concept explained in two sentences</b><p>A recursive function repeatedly solves a smaller problem. The base case stops recursion and begins returning values.</p></div>
+</div></article>
+<article class="question written"><div class="qhead"><span class="number">Q30</span><h3 style="margin:0">Local Binding and Lists</h3><span class="week">D</span></div>
+<pre><code>(let ((numbers '(3 6 9 12)))
+  (+ (car numbers)
+     (car (cdr numbers))))</code></pre>
+<p><b>Question:</b> Identify the local variable, evaluate the car operations and calculate the result.</p><button class="action" onclick="toggleAnswer(this)">Show answer &amp; explanation</button><div class="response hidden"><div class="answer"><b>Detailed model answer — step by step</b><p><strong>Local variable:</strong> <code>numbers</code>, bound to <code>(3 6 9 12)</code> inside <code>let</code>.</p><ol><li><code>(car numbers)</code> returns the first element: 3.</li><li><code>(cdr numbers)</code> returns (6 9 12).</li><li><code>(car (cdr numbers))</code> returns the first element of that remainder: 6.</li><li><code>(+ 3 6)</code> evaluates to <strong>9</strong>.</li></ol></div><div class="concept"><b>Concept explained in two sentences</b><p>let introduces a local binding. Nested list operations access elements that can then be used in arithmetic.</p></div>
+</div></article>
+</main><footer>CSCI 310 · Midterm Practice Question Bank · Dr. Maher Alrahhal<br/>For student practice; not a guarantee of exact examination questions.</footer><script>
+function choose(button,index){const q=button.closest('.mcq');if(q.dataset.answered)return;q.dataset.answered='1';q.dataset.chosen=index;const correct=Number(q.dataset.correct);q.querySelectorAll('.opt').forEach((el,j)=>{el.disabled=true;if(j===correct)el.classList.add('correct');if(j===index&&index!==correct)el.classList.add('wrong')});q.querySelector('.answer').classList.remove('hidden');updateScore()}
+function updateScore(){let score=0;document.querySelectorAll('.mcq').forEach(q=>{if(q.dataset.answered&&Number(q.dataset.chosen)===Number(q.dataset.correct))score++});document.getElementById('score').textContent=score}
+function resetMcq(){document.querySelectorAll('.mcq').forEach(q=>{delete q.dataset.answered;delete q.dataset.chosen;q.querySelectorAll('.opt').forEach(b=>{b.disabled=false;b.classList.remove('correct','wrong')});q.querySelector('.answer').classList.add('hidden')});updateScore()}
+function toggleAnswer(b){const r=b.nextElementSibling;const showing=r.classList.toggle('hidden');b.textContent=showing?'Show answer & explanation':'Hide answer & explanation'}
+function revealAll(show){document.querySelectorAll('.written').forEach(q=>{q.querySelector('.response').classList.toggle('hidden',!show);q.querySelector('.action').textContent=show?'Hide answer & explanation':'Show answer & explanation'})}
+</script></body></html>
