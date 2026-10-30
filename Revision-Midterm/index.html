@@ -1,596 +1,83 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSCI 310 | Let's Practice</title><style>
-:root{color-scheme:light;--bg:#f3f6f5;--surface:#fff;--ink:#263b42;--muted:#52656b;--line:#dce7e4;--accent:#276b68;--answer:#f0f8f4}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}main{max-width:960px;margin:auto;padding:38px 22px 90px}h1,h2,h3{line-height:1.35;letter-spacing:-.02em}h1{font-size:2rem;color:#235f5e}h2{font-size:1.48rem;margin-top:42px;color:#245b59;border-bottom:1px solid var(--line);padding-bottom:12px}h3{font-size:1.13rem;margin-top:22px;color:#254b50}p{margin:12px 0}strong{color:#235f5e}pre{background:#f0f4f6;color:#253a45;padding:18px 20px;border:1px solid #dae4e7;border-radius:12px;overflow:auto;font:15px/1.65 Consolas,monospace}code{font-family:Consolas,monospace;font-size:.92em}p code,li code{background:#edf3f2;padding:2px 5px;border-radius:4px}table{border-collapse:collapse;width:100%;font-size:.94em;margin:18px 0}th,td{border:1px solid var(--line);padding:10px 12px;text-align:left}th{background:#eaf2f0}tr:nth-child(even){background:#f8fbfa}.qcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 26px;margin:22px 0;box-shadow:0 3px 12px #254a4408}.qcard h3:first-child{margin-top:0}hr{border:0;border-top:1px solid var(--line);margin:26px 0}header{padding:24px 0 14px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0 28px}button{border:1px solid #aaccc5;border-radius:10px;padding:10px 15px;background:#e9f3f0;color:#235a58;font-weight:650;cursor:pointer}button:hover{background:#d9ece6}.answer-hidden{display:none}body.dark{--bg:#182426;--surface:#233234;--ink:#e3eceb;--muted:#a8bfba;--line:#395051;--accent:#a2d6c9;--answer:#283e39}body.dark strong,body.dark h1,body.dark h2,body.dark h3{color:#b9e0d6}body.dark pre{background:#1b2a30;color:#e0e9e8;border-color:#40585c}body.dark p code,body.dark li code{background:#314547}body.dark th{background:#2c4140}body.dark tr:nth-child(even){background:#27393a}body.dark button{background:#2d4844;color:#d8f0e7;border-color:#567c74}@media print{body{background:#fff;color:#111;font-size:12px}.toolbar{display:none}main{max-width:none;padding:0}.qcard{box-shadow:none;break-inside:avoid}pre{white-space:pre-wrap}.answer-hidden{display:block}}@media(max-width:600px){main{padding:18px 12px}.qcard{padding:17px 15px}body{font-size:16px}}
-</style></head><body><main><div class="toolbar"><button onclick="document.body.classList.toggle('dark')">Light / Dark</button><button onclick="window.print()">Print / Save PDF</button></div><h1>AMITY UNIVERSITY DUBAI</h1>
-<h2>CSCI 310 – Principles of Programming Languages</h2>
-<h3>Let’s Practice — Questions, Answers and Explanations</h3>
-<p><strong>Instructor:</strong> Dr. Maher Alrahhal<br />
-<strong>Coverage:</strong> Weeks 1–7<br />
-<strong>Course Learning Outcomes:</strong> CLO 1 and CLO 2</p>
-<p>Practice each question, then review the answer and explanation.</p>
-<hr />
-<h1>SECTION A – MULTIPLE-CHOICE QUESTIONS</h1>
-<article class="qcard"><h3>Q1. Which programming paradigm mainly uses functions and expressions?</h3>
-<p>A. Imperative programming<br />
-B. Functional programming<br />
-C. Object-oriented programming<br />
-D. Logic programming</p>
-<p><strong>Correct Answer: B. Functional programming</strong></p>
-<p><strong>Explanation:</strong> Functional programming focuses on evaluating functions and expressions to produce results. For practiceple, Scheme uses expressions such as <code>(+ 5 3)</code> to calculate values.</p>
-</article><article class="qcard"><h3>Q2. Which programming paradigm organises programs using objects containing data and methods?</h3>
-<p>A. Functional programming<br />
-B. Logic programming<br />
-C. Object-oriented programming<br />
-D. Declarative programming</p>
-<p><strong>Correct Answer: C. Object-oriented programming</strong></p>
-<p><strong>Explanation:</strong> Object-oriented programming organises software around objects that contain data and methods. For practiceple, a <code>Student</code> object can store a student's name and ID and provide a method to calculate a grade.</p>
-</article><article class="qcard"><h3>Q3. Which language evaluation criterion concerns how easily a programmer can understand code?</h3>
-<p>A. Reliability<br />
-B. Readability<br />
-C. Cost<br />
-D. Portability</p>
-<p><strong>Correct Answer: B. Readability</strong></p>
-<p><strong>Explanation:</strong> Readability describes how easily programmers can read and understand source code. Clear names and simple structures improve readability and make programs easier to maintain.</p>
-</article><article class="qcard"><h3>Q4. What is binding in programming languages?</h3>
-<p>A. Deleting variables<br />
-B. Connecting a name to a value or function<br />
-C. Converting integers into strings<br />
-D. Executing two tasks concurrently</p>
-<p><strong>Correct Answer: B. Connecting a name to a value or function</strong></p>
-<p><strong>Explanation:</strong> Binding associates a name with a value, function or another program entity. For practiceple, <code>x = 10</code> binds the name <code>x</code> to the integer <code>10</code>.</p>
-</article><article class="qcard"><h3>Q5. What is the main purpose of a variant record's tag?</h3>
-<p>A. To identify the active form of data<br />
-B. To sort all fields<br />
-C. To create a recursive function<br />
-D. To convert values automatically</p>
-<p><strong>Correct Answer: A. To identify the active form of data</strong></p>
-<p><strong>Explanation:</strong> A variant record can represent different forms of information, such as a Card payment or a Cash payment. Its tag identifies the active form and determines which fields are valid.</p>
-</article><article class="qcard"><h3>Q6. In the expression <code>2 + 3 * 4</code>, which operator is the root of the Abstract Syntax Tree (AST)?</h3>
-<p>A. <code>*</code><br />
-B. <code>+</code><br />
-C. <code>2</code><br />
-D. <code>4</code></p>
-<p><strong>Correct Answer: B. <code>+</code></strong></p>
-<p><strong>Explanation:</strong> Multiplication has higher precedence, so <code>3 * 4</code> is grouped first. Addition is the outermost operation, making <code>+</code> the root of the AST.</p>
-</article><article class="qcard"><h3>Q7. Which statement correctly describes lexical scoping?</h3>
-<p>A. Variables are always taken from the calling function<br />
-B. Variables are resolved according to where functions are defined<br />
-C. All variables must be global<br />
-D. Variables cannot have the same name</p>
-<p><strong>Correct Answer: B. Variables are resolved according to where functions are defined</strong></p>
-<p><strong>Explanation:</strong> Lexical scoping determines variable access using the structure of the source code. An inner function can access variables from its enclosing function.</p>
-</article><article class="qcard"><h3>Q8. Which Scheme keyword creates local bindings?</h3>
-<p>A. <code>print</code><br />
-B. <code>cond</code><br />
-C. <code>let</code><br />
-D. <code>define</code></p>
-<p><strong>Correct Answer: C. <code>let</code></strong></p>
-<p><strong>Explanation:</strong> The Scheme keyword <code>let</code> creates local variables that are available inside its body. These bindings allow temporary calculations without changing unrelated outer variables.</p>
-<hr />
-<h1>SECTION B – CODE ANALYSIS</h1>
-</article><article class="qcard"><h3>Q1. Binding Techniques</h3>
-<p>Consider the following conceptual callback practiceple:</p>
-<pre><code class="language-python"># DEFINE
-x = 10
-y = 20
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>CSCI 310 | Interactive Practice and Learning</title>
+<style>
+:root{--navy:#12233d;--blue:#2459ba;--pale:#eef4ff;--teal:#087e76;--ink:#26344b;--muted:#60718b;--line:#dbe4f0;--bg:#f5f7fb;--good:#e8f7ee}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink)}header{background:linear-gradient(125deg,#11223d,#1f4b8c);color:white;padding:40px max(22px,calc((100vw - 1080px)/2)) 32px}header .eyebrow{letter-spacing:.13em;text-transform:uppercase;color:#c7d8ff;font-size:12px;font-weight:700}h1{font-size:clamp(27px,4vw,42px);line-height:1.16;margin:12px 0}header p{color:#dce7ff;max-width:760px}main{max-width:1080px;margin:auto;padding:24px 20px 80px}.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.chip{background:#ffffff20;border:1px solid #ffffff45;border-radius:30px;padding:5px 13px;font-size:13px}nav{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 24px}nav a{padding:9px 14px;border-radius:10px;background:white;border:1px solid var(--line);text-decoration:none;color:var(--navy);font-weight:700;font-size:13px}nav a:hover{background:var(--pale)}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}button{border:0;border-radius:9px;padding:10px 15px;cursor:pointer;font-weight:700;font-size:14px}button.primary{background:var(--blue);color:white}button.secondary{background:#e8eef9;color:var(--navy)}.section-head{margin:38px 0 15px;border-bottom:2px solid var(--line);padding-bottom:9px;color:var(--navy)}.question{background:white;border:1px solid var(--line);border-radius:16px;margin:18px 0 26px;box-shadow:0 4px 15px #1c33510a;overflow:hidden}.q-head{padding:21px 24px 14px;display:flex;align-items:start;justify-content:space-between;gap:12px}.q-head h3{margin:0;font-size:21px;color:var(--navy)}.marks{white-space:nowrap;color:#1b568e;background:#eaf2ff;border-radius:22px;padding:3px 10px;font-size:12px;font-weight:800}.content{padding:0 24px 24px}.lesson{border-left:4px solid #36a59d;background:#effaf8;padding:15px 18px;border-radius:0 10px 10px 0;margin:8px 0 19px}.lesson h4{margin:0 0 7px;color:#08665f}.lesson p{margin:6px 0}.worked{margin-top:11px;padding:10px 12px;border-radius:8px;background:white;border:1px solid #d1ebe5}.prompt{padding:17px 19px;border:1px solid #dce5f2;border-radius:11px;background:#fbfcff}.prompt h4{margin:0 0 9px;color:#1c4d9b}.prompt p{margin:8px 0}.prompt ol{padding-left:23px}.prompt li{margin:7px 0}pre{background:#17263b;color:#e7f2ff;border-radius:9px;padding:14px 16px;overflow:auto;font:14px/1.55 Consolas,Monaco,monospace;margin:12px 0;white-space:pre}code{font-family:Consolas,Monaco,monospace}p code,li code{background:#edf1f8;color:#183b6c;padding:2px 5px;border-radius:4px}.program-label{font-weight:800;color:#3d5270;font-size:13px;margin:12px 0 4px}.answer-toggle{margin-top:15px}.answer{display:none;background:var(--good);border:1px solid #bee8cd;border-radius:10px;margin-top:13px;padding:16px 19px}.answer.open{display:block}.answer h4{margin:0 0 8px;color:#12633c}.answer p,.answer li{margin:7px 0}.answer pre{background:#143a2d}.note{font-size:14px;color:var(--muted)}.small-table{border-collapse:collapse;width:100%;font-size:14px}.small-table td,.small-table th{border:1px solid #d4e0e8;padding:9px;text-align:left}.small-table th{background:#e7f3f1}.footer{text-align:center;color:var(--muted);margin-top:40px}.toplink{float:right;font-size:13px;color:var(--blue)}@media(max-width:620px){.content{padding:0 15px 18px}.q-head{padding:16px 15px 12px}.q-head h3{font-size:18px}pre{font-size:12px}header{padding:28px 20px}}@media print{body{background:white;font-size:11pt}header{background:white;color:black;padding:10px 0 16px}header p,.eyebrow{color:#333!important}main{padding:0}.toolbar,nav,.answer-toggle,.toplink{display:none!important}.question{box-shadow:none;break-inside:avoid;border-color:#aaa}.answer{display:block!important;background:white;border:1px dashed #888}pre{color:black;background:#f3f3f3;border:1px solid #bbb;white-space:pre-wrap}.lesson{background:#f6f6f6;border-color:#777}.section-head{break-after:avoid}.question{margin:12px 0}}
+
+.lesson .concept-line{display:block;margin:6px 0;padding:5px 0;border-bottom:1px solid #d6eee9}.lesson .concept-line:last-of-type{border-bottom:0}
+</style></head><body id="top"><header><div class="eyebrow">Amity University Dubai · Fall 2026</div><h1>CSCI 310 · Interactive Practice and Learning</h1><p>Principles of Programming Languages · Learn each concept, study an example, practise, and reveal the answer.</p><div class="meta"><span class="chip">8 practice activities</span><span class="chip">Concepts and examples</span><span class="chip">Interactive answers</span></div></header><main><nav aria-label="Question navigation"><a href="#q1">Q1 · Paradigms</a><a href="#q2">Q2 · Evaluation</a><a href="#q3">Q3 · Selection</a><a href="#q4">Q4 · Types</a><a href="#q5">Q5 · Scope</a><a href="#q6">Q6 · Scheme let</a><a href="#q7">Q7 · AST</a><a href="#q8">Q8 · Outputs</a></nav><div class="toolbar"><button class="primary" onclick="toggleAll(true)">Reveal all answers</button><button class="secondary" onclick="toggleAll(false)">Hide all answers</button><button class="secondary" onclick="window.print()">Print / Save as PDF</button></div><p class="note">Revision practice: explanations and answers are provided for learning. Try each activity before revealing the solution.</p><h2 class="section-head">Section A · Programming Paradigms and Language Evaluation</h2>
+<section class="question" id="q1"><div class="q-head"><h3>Q1. Programming Paradigm Analysis</h3></div><div class="content"><div class="lesson"><h4>Key concepts</h4><p class="concept-line"><strong>Imperative programming</strong> — explains <em>how</em> to solve a problem through instructions, loops and changing variables.</p><p class="concept-line"><strong>Functional programming</strong> — focuses on applying functions to values and combining their results.</p><div class="worked"><strong>Worked example:</strong> To double <code>[1, 2, 3]</code>, an imperative approach uses a loop and appends each doubled value. A functional-style approach can use <code>map(lambda x: x * 2, numbers)</code>. Both represent the same transformation.</div><p class="note">Python supports multiple paradigms. The questions ask which style each program illustrates, not whether Python belongs to only one paradigm.</p></div><div class="prompt"><h4>Try it yourself</h4><p>Consider the following two Python programs.</p><div class="program-label">Program A</div><pre>numbers = [2, 4, 6]
+result = 0
+for n in numbers:
+    result += n
+print(result)</pre><div class="program-label">Program B</div><pre>numbers = [2, 4, 6]
+result = sum(map(lambda n: n, numbers))
+print(result)</pre><ol type="a"><li>Identify the main programming paradigm illustrated by each program. <strong></strong></li><li>Explain the difference between the two approaches in terms of how the result is calculated. <strong></strong></li><li>Write the output of both programs and explain why they produce the same result. <strong></strong></li></ol></div><button aria-controls="a1" aria-expanded="false" class="primary answer-toggle" onclick="toggleAnswer('a1',this)">Show model answer</button><div class="answer" id="a1"><h4>Model answer</h4><p><strong>a.</strong> A illustrates an imperative approach; B illustrates a functional-style approach.</p><p><strong>b.</strong> A updates <code>result</code> repeatedly inside a loop. B passes values through <code>map</code> and aggregates them with <code>sum</code>. The lambda is the identity function, so the original values are unchanged.</p><p><strong>c.</strong> Both print <code>12</code> because <code>2 + 4 + 6 = 12</code>.</p></div></div></section>
+<section class="question" id="q2"><div class="q-head"><h3>Q2. Programming Language Evaluation</h3></div><div class="content"><div class="lesson"><h4>Key concepts</h4><p class="concept-line"><strong>Readability</strong> — how easily someone can understand code.</p><p class="concept-line"><strong>Writability</strong> — how easily a programmer can express a solution. Shorter code may improve writability, but readability can depend on familiarity and clarity.</p><div class="worked"><strong>Worked example:</strong> <code>total = sum([1, 2, 3])</code> expresses a calculation in one line. A loop shows each addition separately. Either may be easier to read depending on the audience.</div></div><div class="prompt"><h4>Try it yourself</h4><div class="program-label">Program A</div><pre>total = 0
+for i in range(1, 6):
+    total += i
+print(total)</pre><div class="program-label">Program B</div><pre>print(sum(range(1, 6)))</pre><ol type="a"><li>Which program do you consider more readable? Explain your choice using the concept of readability. <strong></strong></li><li>Compare the two programs in terms of writability. Which program requires less code, and why? <strong></strong></li></ol></div><button aria-controls="a2" aria-expanded="false" class="primary answer-toggle" onclick="toggleAnswer('a2',this)">Show model answer</button><div class="answer" id="a2"><h4>Model answer</h4><p><strong>a.</strong> A reasonable answer is Program B: <code>sum(range(1, 6))</code> states the goal directly and is concise. Program A is also acceptable if justified because it makes the steps explicit.</p><p><strong>b.</strong> Program B is more concise and requires fewer statements, because the built-in <code>sum</code> replaces a manually written loop. Both print <code>15</code>.</p></div></div></section>
+<section class="question" id="q3"><div class="q-head"><h3>Q3. Selecting Programming Paradigms</h3></div><div class="content"><div class="lesson"><h4>Key concepts</h4><p class="concept-line"><strong>Imperative:</strong> a sequence of commands changes program state.</p><p class="concept-line"><strong>Functional:</strong> calculations are expressed through functions, often avoiding changes to existing data.</p><p class="concept-line"><strong>Logic:</strong> facts and rules are used to derive conclusions.</p><div class="worked"><strong>Worked example:</strong> A shopping cart that updates its running total step by step suggests an imperative approach. A function that transforms each price suggests functional style. A rule such as “eligible if credits ≥ 12” can be expressed in a logic system.</div></div><div class="prompt"><h4>Try it yourself</h4><p>A university is developing three software components:</p><ol type="a"><li>A system that updates student attendance records step by step.</li><li>A system that processes a collection of marks using functions without changing the original data.</li><li>A system that determines scholarship eligibility using facts and logical rules.</li></ol><p>For <strong>each component</strong>, identify the most appropriate programming paradigm <strong></strong> and justify your choice using one characteristic of that paradigm <strong></strong>.</p></div><button aria-controls="a3" aria-expanded="false" class="primary answer-toggle" onclick="toggleAnswer('a3',this)">Show model answer</button><div class="answer" id="a3"><h4>Model answer</h4><table class="small-table"><tr><th>Component</th><th>Paradigm</th><th>Justification</th></tr><tr><td>a · Attendance updates</td><td>Imperative</td><td>Uses sequential instructions to update records/state.</td></tr><tr><td>b · Marks transformation</td><td>Functional</td><td>Applies functions without modifying original data.</td></tr><tr><td>c · Scholarship rules</td><td>Logic</td><td>Uses facts and rules to infer eligibility.</td></tr></table></div></div></section>
+<h2 class="section-head">Section B · Programming Language Analysis</h2>
+<section class="question" id="q4"><div class="q-head"><h3>Q4. Syntax and Semantics</h3></div><div class="content"><div class="lesson"><h4>Key concepts</h4><p class="concept-line"><strong>Syntax</strong> — the grammar of a programming language.</p><p class="concept-line"><strong>Semantics</strong> concerns meaning and behaviour. A statement can be syntactically valid but fail when executed due to incompatible types.</p><div class="worked"><strong>Worked example:</strong> <code>print(2 + "4")</code> follows Python grammar but raises a <code>TypeError</code>. <code>print(2 + int("4"))</code> prints <code>6</code>.</div></div><div class="prompt"><h4>Try it yourself</h4><pre>x = 5
+y = "3"
+print(x + y)</pre><ol type="a"><li>Is the code syntactically valid? Explain your answer. <strong></strong></li><li>Identify the error that occurs during execution and explain its cause. <strong></strong></li><li>Correct the last statement using explicit type conversion so that the program prints <code>8</code>. <strong></strong></li></ol></div><button aria-controls="a4" aria-expanded="false" class="primary answer-toggle" onclick="toggleAnswer('a4',this)">Show model answer</button><div class="answer" id="a4"><h4>Model answer</h4><p><strong>a.</strong> Yes. The code is syntactically valid Python.</p><p><strong>b.</strong> It raises <code>TypeError</code> because <code>+</code> cannot add an integer and a string in this way.</p><p><strong>c.</strong> Replace the last line with:</p><pre>print(x + int(y))</pre><p>Output: <code>8</code>.</p></div></div></section>
+<section class="question" id="q5"><div class="q-head"><h3>Q5. Local and Global Variables</h3></div><div class="content"><div class="lesson"><h4>Key concepts</h4><p class="concept-line">A</p><p class="concept-line"><strong>global variable</strong> — defined outside functions. A</p><p class="concept-line"><strong>local variable</strong> — defined inside a function and is normally used only there. If a function assigns the same name, that local name does not automatically replace the global variable.</p><div class="worked"><strong>Worked example:</strong><pre>score = 80
+def show():
+    score = 50
+    print(score)
+show()
+print(score)</pre><p>Output: <code>50</code>, then <code>80</code>.</p></div></div><div class="prompt"><h4>Try it yourself</h4><pre>x = 10
 
 def calculate():
-    print(x + y)
+    x = 5
+    print(x + 2)
 
-# EXECUTE
-def execute(func):
-    x = 50
-    y = 60
-    func()
+calculate()
+print(x)</pre><ol type="a"><li>Write the exact output of the program. <strong></strong></li><li>Identify the local and global variables named <code>x</code>. Explain why they have different values. <strong></strong></li></ol></div><button aria-controls="a5" aria-expanded="false" class="primary answer-toggle" onclick="toggleAnswer('a5',this)">Show model answer</button><div class="answer" id="a5"><h4>Model answer</h4><p><strong>a.</strong></p><pre>7
+10</pre><p><strong>b.</strong> The global <code>x</code> is <code>10</code>; the local <code>x</code> inside <code>calculate()</code> is <code>5</code>. The local assignment does not change the global variable.</p></div></div></section>
+<section class="question" id="q6"><div class="q-head"><h3>Q6. Local Binding in Scheme</h3></div><div class="content"><div class="lesson"><h4>Key concepts</h4><p class="concept-line">Scheme's <code>let</code> creates temporary local bindings. In an ordinary <code>let</code>, the initial values are evaluated in the</p><p class="concept-line"><strong>surrounding environment</strong>. An inner <code>let</code> can introduce a new variable with the same name, hiding the outer binding inside its body.</p><div class="worked"><strong>Worked example:</strong><pre>(let ((x 4))
+  (let ((x (+ x 2)))
+    (* x 3)))</pre><p>The inner <code>x</code> becomes <code>6</code> using outer <code>x = 4</code>; the final result is <code>18</code>.</p></div></div><div class="prompt"><h4>Try it yourself</h4><pre>(let ((x 10)
+      (y 5))
+  (let ((x (+ x 3))
+        (z (+ y 2)))
+    (+ x z)))</pre><ol type="a"><li>Determine the value assigned to the inner <code>x</code>. <strong></strong></li><li>Determine the value assigned to <code>z</code>. <strong></strong></li><li>Explain which bindings are used to calculate the inner <code>x</code> and <code>z</code>. <strong></strong></li><li>Calculate the final result. <strong></strong></li></ol></div><button aria-controls="a6" aria-expanded="false" class="primary answer-toggle" onclick="toggleAnswer('a6',this)">Show model answer</button><div class="answer" id="a6"><h4>Model answer</h4><p><strong>a.</strong> Inner <code>x = 10 + 3 = 13</code>.</p><p><strong>b.</strong> <code>z = 5 + 2 = 7</code>.</p><p><strong>c.</strong> The inner initialisation expressions use the outer bindings <code>x = 10</code> and <code>y = 5</code>.</p><p><strong>d.</strong> <code>13 + 7 = 20</code>.</p></div></div></section>
+<section class="question" id="q7"><div class="q-head"><h3>Q7. Abstract Syntax Tree</h3></div><div class="content"><div class="lesson"><h4>Key concepts</h4><p class="concept-line">An</p><p class="concept-line"><strong>Abstract Syntax Tree (AST)</strong> represents the structure of an expression.</p><p class="concept-line"><strong>Operators</strong> are internal nodes and</p><p class="concept-line"><strong>numbers</strong> are leaf nodes. Parentheses and operator precedence determine the grouping.</p><div class="worked"><strong>Worked example:</strong> For <code>2 + 3 * 4</code>, multiplication happens first, so <code>+</code> is the root and <code>*</code> is its right child.<pre>    +
+   / \
+  2   *
+     / \
+    3   4</pre><p>Value: <code>2 + 12 = 14</code>.</p></div></div><div class="prompt"><h4>Try it yourself</h4><p>Consider the expression:</p><pre>(8 + 4) * (6 - 2) + 5 * 3</pre><ol type="a"><li>Draw the complete Abstract Syntax Tree (AST), showing the correct operators and operands. <strong></strong></li><li>Identify the root operator and evaluate the expression. <strong></strong></li></ol></div><button aria-controls="a7" aria-expanded="false" class="primary answer-toggle" onclick="toggleAnswer('a7',this)">Show model answer</button><div class="answer" id="a7"><h4>Model answer</h4><pre>          +
+        /   \
+       *     *
+      / \   / \
+     +   - 5   3
+    / \ / \
+   8  4 6  2</pre><p><strong>Root operator:</strong> <code>+</code>.</p><p><strong>Evaluation:</strong> <code>(8 + 4) * (6 - 2) + 5 * 3 = 12 * 4 + 15 = 63</code>.</p></div></div></section>
+<section class="question" id="q8"><div class="q-head"><h3>Q8. Predict the Output</h3></div><div class="content"><div class="lesson"><h4>Key concepts</h4><p class="concept-line"><strong>Conversion:</strong> <code>int("7")</code> becomes integer <code>7</code>; <code>int(4.9)</code> truncates to <code>4</code>.</p><p class="concept-line"><strong>Scope:</strong> a local variable may hide a global one.</p><p class="concept-line"><strong>Scheme let:</strong> inner bindings may shadow outer ones.</p><p class="concept-line"><strong>cond:</strong> the first true condition selects the result.</p><p class="concept-line"><strong>Expressions:</strong> multiplication is evaluated before addition.</p><div class="worked"><strong>Worked example:</strong><pre>value = "9"
+print(int(value) + 2 * 3)</pre><p>Convert the string first, then multiply: <code>9 + 6 = 15</code>.</p></div></div><div class="prompt"><h4>Try it yourself</h4><p>Answer <strong>all five parts</strong>. Write the exact output or final result.</p><div class="program-label">a. Type Conversion and Coercion ·</div><pre>x = "12"
+y = 3.5
+z = int(x) + y * 2
+print(int(z) - 4)</pre><div class="program-label">b. Global and Local Scope ·</div><pre>x = 10
 
-# PASS
-x = 30
-y = 40
-execute(calculate)
-</code></pre>
-<p><strong>a. Calculate the result under each of the following conceptual binding techniques.</strong></p>
-<p><strong>Answer:</strong></p>
-<table>
-<thead>
-<tr>
-  <th>Binding technique</th>
-  <th>Environment used</th>
-  <th>Calculation</th>
-  <th>Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Ad-hoc binding</td>
-  <td>DEFINE</td>
-  <td>10 + 20</td>
-  <td>30</td>
-</tr>
-<tr>
-  <td>Deep binding</td>
-  <td>PASS</td>
-  <td>30 + 40</td>
-  <td>70</td>
-</tr>
-<tr>
-  <td>Shallow binding</td>
-  <td>EXECUTE</td>
-  <td>50 + 60</td>
-  <td>110</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Explanation:</strong></p>
-<ul>
-<li><strong>Ad-hoc binding:</strong> Uses the environment associated with the function's definition.</li>
-<li><strong>Deep binding:</strong> Uses the environment associated with passing the function.</li>
-<li><strong>Shallow binding:</strong> Uses the environment where the function is executed.</li>
-</ul>
-<p>These are the conceptual binding cases used in the course material. They are not three selectable execution modes in Python.</p>
-<p><strong>b. Write the actual Python output.</strong></p>
-<p><strong>Answer:</strong></p>
-<pre><code class="language-text">70
-</code></pre>
-<p><strong>Step-by-step explanation:</strong></p>
-<ol>
-<li>Initially, the global variables are <code>x = 10</code> and <code>y = 20</code>.</li>
-<li>Before calling <code>execute(calculate)</code>, the global variables change to <code>x = 30</code> and <code>y = 40</code>.</li>
-<li>Inside <code>execute()</code>, the variables <code>x = 50</code> and <code>y = 60</code> are local to that function.</li>
-<li>The function <code>calculate()</code> reads the global variables, not the local variables inside <code>execute()</code>.</li>
-<li>Therefore, Python calculates <code>30 + 40 = 70</code>.</li>
-</ol>
-<p><strong>Explanation:</strong> Python uses lexical scoping. The conceptual binding comparison must be distinguished from actual Python execution.</p>
-<hr />
-</article><article class="qcard"><h3>Q2. Local Binding in Scheme</h3>
-<p>Consider the following Scheme expression:</p>
-<pre><code class="language-scheme">(let ((x 10))
-  (let ((x 2)
-        (y (+ x 3)))
-    (+ x y)))
-</code></pre>
-<p><strong>a. Write the exact output.</strong></p>
-<p><strong>Answer:</strong></p>
-<pre><code class="language-text">15
-</code></pre>
-<p><strong>b. Explain which value of <code>x</code> is used to calculate <code>y</code> and why.</strong></p>
-<p><strong>Answer:</strong></p>
-<p>The expression used to calculate <code>y</code> takes the outer value <code>x = 10</code>.</p>
-<p>Therefore:</p>
-<pre><code class="language-text">Outer x = 10
+def calculate():
+    x = 5
+    y = x + 3
+    print(y * 2)
 
-Inner x = 2
-
-y = 10 + 3 = 13
-
-Final result = 2 + 13 = 15
-</code></pre>
-<p><strong>Step-by-step explanation:</strong></p>
-<ol>
-<li>The outer <code>let</code> creates <code>x = 10</code>.</li>
-<li>The inner <code>let</code> creates new bindings for <code>x</code> and <code>y</code>.</li>
-<li>In ordinary Scheme <code>let</code>, the initial values are evaluated in the surrounding environment.</li>
-<li>Therefore, <code>y</code> uses the outer <code>x = 10</code>, giving <code>y = 13</code>.</li>
-<li>Inside the inner body, the new <code>x = 2</code> is used.</li>
-<li>The final expression becomes <code>(+ 2 13)</code>, producing <code>15</code>.</li>
-</ol>
-<p><strong>Explanation:</strong> Ordinary <code>let</code> evaluates binding expressions before the new local bindings become available in its body.</p>
-<hr />
-</article><article class="qcard"><h3>Q3. Conditional Evaluation</h3>
-<p>Consider the following Scheme expression:</p>
-<pre><code class="language-scheme">(let (( 78)
-      (attendance 85))
+calculate()
+print(x + 5)</pre><div class="program-label">c. Scheme Local Binding and Variable Shadowing ·</div><pre>(let ((a 12)
+      (b 4))
+  (let ((b 7))
+    (+ (- a b) (* b 2))))</pre><div class="program-label">d. Conditional Evaluation ·</div><pre>(let ((mark 75)
+      (attendance 80))
   (cond
-    ((&lt; attendance 75) &quot;Not Eligible&quot;)
-    ((&gt;=  90) &quot;Excellent&quot;)
-    ((&gt;=  60)
-     (if (&gt;= attendance 80)
-         &quot;Pass&quot;
-         &quot;Review&quot;))
-    (else &quot;Fail&quot;)))
-</code></pre>
-<p><strong>a. Write the exact output.</strong></p>
-<p><strong>Answer:</strong></p>
-<pre><code class="language-text">&quot;Pass&quot;
-</code></pre>
-<p><strong>b. Explain which conditions are evaluated and why the selected branch produces that output.</strong></p>
-<p><strong>Answer:</strong></p>
-<table>
-<thead>
-<tr>
-  <th>Step</th>
-  <th>Condition</th>
-  <th>Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>1</td>
-  <td><code>85 &lt; 75</code></td>
-  <td>False</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td><code>78 &gt;= 90</code></td>
-  <td>False</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td><code>78 &gt;= 60</code></td>
-  <td>True</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td><code>85 &gt;= 80</code></td>
-  <td>True</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>Selected result</td>
-  <td><code>&quot;Pass&quot;</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Step-by-step explanation:</strong></p>
-<ol>
-<li><code>let</code> creates <code> = 78</code> and <code>attendance = 85</code>.</li>
-<li>The first <code>cond</code> condition is false because attendance is not below 75.</li>
-<li>The second condition is false because the  is below 90.</li>
-<li>The third condition is true because the  is at least 60.</li>
-<li>The nested <code>if</code> checks whether attendance is at least 80.</li>
-<li>Since <code>85 &gt;= 80</code> is true, the expression returns <code>&quot;Pass&quot;</code>.</li>
-</ol>
-<p><strong>Explanation:</strong> <code>cond</code> selects the first matching branch, while <code>if</code> chooses between two alternatives.</p>
-<hr />
-</article><article class="qcard"><h3>Q4. Type Conversion and Coercion</h3>
-<p>Consider the following Python program:</p>
-<pre><code class="language-python">x = int(&quot;8&quot;)
-y = 2.5
-
-print(x + y)
-print(int(9.8))
-</code></pre>
-<p><strong>a. Write the exact output of both print statements.</strong></p>
-<p><strong>Answer:</strong></p>
-<pre><code class="language-text">10.5
-9
-</code></pre>
-<p><strong>b. Explain the type conversions or coercions performed in the program.</strong></p>
-<p><strong>Answer:</strong></p>
-<ul>
-<li><code>int(&quot;8&quot;)</code> explicitly converts the string <code>&quot;8&quot;</code> into the integer <code>8</code>.</li>
-<li><code>8 + 2.5</code> produces the floating-point value <code>10.5</code> through automatic numeric coercion.</li>
-<li><code>int(9.8)</code> explicitly converts the floating-point value into the integer <code>9</code>, discarding its fractional part.</li>
-</ul>
-<p><strong>Step-by-step explanation:</strong></p>
-<ol>
-<li>Python converts <code>&quot;8&quot;</code> into the integer <code>8</code>.</li>
-<li>When adding <code>8</code> and <code>2.5</code>, Python produces a floating-point result.</li>
-<li>The first print statement displays <code>10.5</code>.</li>
-<li>The second conversion truncates <code>9.8</code> towards zero, producing <code>9</code>.</li>
-</ol>
-<p><strong>Explanation:</strong> Explicit conversion is requested by the programmer, while coercion happens automatically during an operation.</p>
-<hr />
-<h1>SECTION C – SHORT-ANSWER QUESTIONS</h1>
-</article><article class="qcard"><h3>Q1. Programming Paradigms</h3>
-<p><strong>Question:</strong> Explain the difference between imperative programming and functional programming. Give one simple practiceple of each.</p>
-<p><strong>Answer:</strong></p>
-<p><strong>Imperative programming</strong> describes how to solve a problem through a sequence of instructions that can change program state.</p>
-<p>practiceple:</p>
-<pre><code class="language-python">x = 5
-x = x + 3
-print(x)
-</code></pre>
-<p>Output:</p>
-<pre><code class="language-text">8
-</code></pre>
-<p><strong>Functional programming</strong> focuses on evaluating functions and expressions to produce results.</p>
-<p>practiceple in Scheme:</p>
-<pre><code class="language-scheme">(+ 5 3)
-</code></pre>
-<p>Result:</p>
-<pre><code class="language-text">8
-</code></pre>
-<p><strong>Comparison:</strong></p>
-<table>
-<thead>
-<tr>
-  <th>Imperative programming</th>
-  <th>Functional programming</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Focuses on instructions</td>
-  <td>Focuses on functions and expressions</td>
-</tr>
-<tr>
-  <td>Commonly changes variables</td>
-  <td>Often emphasises avoiding mutable state</td>
-</tr>
-<tr>
-  <td>practiceple: Python assignment</td>
-  <td>practiceple: Scheme expressions</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Concept explanation:</strong> Imperative programming describes the steps used to perform a calculation. Functional programming expresses the calculation through function application.</p>
-<hr />
-</article><article class="qcard"><h3>Q2. Scope and Binding</h3>
-<p><strong>Question:</strong> Explain the difference between global scope and local scope. Use a simple Python practiceple to support your answer.</p>
-<p><strong>Answer:</strong></p>
-<p><strong>Global scope:</strong> A variable defined outside functions belongs to the module's global scope.</p>
-<p><strong>Local scope:</strong> A variable defined inside a function is normally available only within that function.</p>
-<p>practiceple:</p>
-<pre><code class="language-python">x = 100
-
-def show():
-    x = 20
-    print(x)
-
-show()
-print(x)
-</code></pre>
-<p>Output:</p>
-<pre><code class="language-text">20
-100
-</code></pre>
-<p><strong>Step-by-step explanation:</strong></p>
-<ol>
-<li>The global variable <code>x</code> is assigned <code>100</code>.</li>
-<li>Inside <code>show()</code>, a separate local variable <code>x</code> is assigned <code>20</code>.</li>
-<li>The first <code>print()</code> uses the local variable and displays <code>20</code>.</li>
-<li>The second <code>print()</code> uses the global variable and displays <code>100</code>.</li>
-</ol>
-<p><strong>Explanation:</strong> Local variables can shadow global variables with the same name without changing the global value.</p>
-<hr />
-</article><article class="qcard"><h3>Q3. Data Types</h3>
-<p><strong>Question:</strong> Explain the differences between a list, tuple, dictionary and list of records. Give one suitable application for each.</p>
-<p><strong>Answer:</strong></p>
-<p><strong>1. List</strong></p>
-<p>A list stores an ordered collection of values and allows elements to be modified.</p>
-<pre><code class="language-python"> = [72, 85, 91]
-print([1])
-</code></pre>
-<p>Output: <code>85</code></p>
-<p><strong>Application:</strong> Storing student .</p>
-<p><strong>2. Tuple</strong></p>
-<p>A tuple stores an ordered collection whose elements cannot be reassigned after creation.</p>
-<pre><code class="language-python">point = (4, 7)
-print(point[0])
-</code></pre>
-<p>Output: <code>4</code></p>
-<p><strong>Application:</strong> Representing a fixed coordinate <code>(x, y)</code>.</p>
-<p><strong>3. Dictionary</strong></p>
-<p>A dictionary stores information using named keys.</p>
-<pre><code class="language-python">student = {
-    &quot;name&quot;: &quot;Sara&quot;,
-    &quot;id&quot;: 101,
-    &quot;gpa&quot;: 3.5
-}
-
-print(student[&quot;name&quot;])
-</code></pre>
-<p>Output: <code>Sara</code></p>
-<p><strong>Application:</strong> Storing the information of one student.</p>
-<p><strong>4. List of records</strong></p>
-<p>A list of records stores several structured entries, each containing multiple fields.</p>
-<pre><code class="language-python">students = [
-    {&quot;name&quot;: &quot;Sara&quot;, &quot;id&quot;: 101},
-    {&quot;name&quot;: &quot;Omar&quot;, &quot;id&quot;: 102}
-]
-
-print(students[1][&quot;name&quot;])
-</code></pre>
-<p>Output: <code>Omar</code></p>
-<p><strong>Application:</strong> Storing information about many students.</p>
-<p><strong>Concept explanation:</strong> Lists and tuples access values using positions, while dictionaries access values using named keys. A list of dictionaries combines both ideas to organise multiple structured records.</p>
-<hr />
-<h1>SECTION D – APPLIED PROBLEMS</h1>
-</article><article class="qcard"><h3>Q1. Binary Search Tree (BST)</h3>
-<p><strong>Question:</strong> Construct a Binary Search Tree by inserting the following elements in order:</p>
-<p><code>45, 25, 65, 15, 35, 55, 75</code></p>
-<p><strong>a. Draw the initial BST after inserting all seven elements.</strong></p>
-<p><strong>Answer:</strong></p>
-<pre><code class="language-text">           45
-         /    \
-       25      65
-      /  \    /  \
-    15   35  55   75
-</code></pre>
-<p><strong>Step-by-step explanation:</strong></p>
-<ol>
-<li>Insert <code>45</code> as the root.</li>
-<li>Insert <code>25</code> to the left of <code>45</code> because 25 is smaller.</li>
-<li>Insert <code>65</code> to the right of <code>45</code> because 65 is greater.</li>
-<li>Insert <code>15</code> to the left of <code>25</code>.</li>
-<li>Insert <code>35</code> to the right of <code>25</code>.</li>
-<li>Insert <code>55</code> to the left of <code>65</code>.</li>
-<li>Insert <code>75</code> to the right of <code>65</code>.</li>
-</ol>
-<p><strong>b. Insert the values 30 and 60 into the BST. Draw the final tree showing their correct positions.</strong></p>
-<p><strong>Answer:</strong></p>
-<pre><code class="language-text">             45
-           /    \
-         25      65
-        /  \    /  \
-      15   35  55   75
-           /     \
-          30      60
-</code></pre>
-<p><strong>Inserting 30:</strong></p>
-<ul>
-<li><code>30 &lt; 45</code> → move left.</li>
-<li><code>30 &gt; 25</code> → move right.</li>
-<li><code>30 &lt; 35</code> → insert as the left child of <code>35</code>.</li>
-</ul>
-<p><strong>Inserting 60:</strong></p>
-<ul>
-<li><code>60 &gt; 45</code> → move right.</li>
-<li><code>60 &lt; 65</code> → move left.</li>
-<li><code>60 &gt; 55</code> → insert as the right child of <code>55</code>.</li>
-</ul>
-<p><strong>Explanation:</strong> In a BST with distinct values, smaller values belong in the left subtree and greater values belong in the right subtree.</p>
-<hr />
-</article><article class="qcard"><h3>Q2. Abstract Syntax Tree (AST)</h3>
-<p><strong>Question:</strong> Consider the following expression:</p>
-<pre><code class="language-text">(8 + 4) * (6 - 2) + 5
-</code></pre>
-<p><strong>a. Draw the Abstract Syntax Tree.</strong></p>
-<p><strong>Answer:</strong></p>
-<pre><code class="language-text">              +
-             / \
-            *   5
-           / \
-          +   -
-         / \ / \
-        8  4 6  2
-</code></pre>
-<p><strong>Step-by-step explanation:</strong></p>
-<ol>
-<li>The parentheses group <code>8 + 4</code> into one subtree.</li>
-<li>The parentheses also group <code>6 - 2</code> into another subtree.</li>
-<li>The two results are multiplied, so <code>*</code> connects both subtrees.</li>
-<li>Finally, <code>5</code> is added, so the outermost <code>+</code> becomes the root.</li>
-</ol>
-<p><strong>b. Calculate the final result.</strong></p>
-<p><strong>Answer:</strong></p>
-<pre><code class="language-text">(8 + 4) * (6 - 2) + 5
-= 12 * 4 + 5
-= 48 + 5
-= 53
-</code></pre>
-<p><strong>Final result: 53</strong></p>
-<p><strong>Explanation:</strong> An AST represents the structure of an expression and makes the order of operations clear.</p>
-<hr />
-</article><article class="qcard"><h3>Q3. Inductive Data Types</h3>
-<p><strong>Question:</strong> Consider the following recursive list representation:</p>
-<pre><code class="language-text">Node(10, Node(20, Node(30, Empty)))
-</code></pre>
-<p><strong>a. Identify the base case.</strong></p>
-<p><strong>Answer:</strong> <code>Empty</code></p>
-<p><strong>Explanation:</strong> <code>Empty</code> represents the simplest possible list, containing no elements. It ends the recursive construction.</p>
-<p><strong>b. Identify the number of nodes and write their values in order.</strong></p>
-<p><strong>Answer:</strong></p>
-<p>Number of nodes: <strong>3</strong></p>
-<p>Values in order:</p>
-<pre><code class="language-text">10 → 20 → 30 → Empty
-</code></pre>
-<p><strong>Explanation:</strong> Each <code>Node</code> stores one value and a reference to the remaining list. The representation contains three nodes before reaching <code>Empty</code>.</p>
-<p><strong>c. Explain the purpose of <code>Node(value, rest)</code> in an inductive data type.</strong></p>
-<p><strong>Answer:</strong></p>
-<p><code>Node(value, rest)</code> constructs a list element using two parts:</p>
-<ul>
-<li><code>value</code>: The current element.</li>
-<li><code>rest</code>: The remaining list, which can contain more nodes or <code>Empty</code>.</li>
-</ul>
-<p>practiceple:</p>
-<pre><code class="language-text">Node(10, Node(20, Empty))
-</code></pre>
-<p>This represents a list containing <code>10</code> followed by <code>20</code>.</p>
-<p><strong>Explanation:</strong> An inductive data type is built from a base case and constructors that combine smaller values into larger structures.</p>
-<hr />
-<h2>EXTRA PRACTICE – LISP / SCHEME</h2>
-<p><strong>Question:</strong> Write the exact result of each Scheme expression.</p>
-<pre><code class="language-scheme">(car '(10 20 30))
-
-(cdr '(10 20 30))
-
-(cons 5 '(10 20))
-</code></pre>
-<h3>Answer 1</h3>
-<pre><code class="language-scheme">(car '(10 20 30))
-</code></pre>
-<p><strong>Result:</strong></p>
-<pre><code class="language-text">10
-</code></pre>
-<p><strong>Explanation:</strong> <code>car</code> returns the first element of a non-empty list. Here, the first element is <code>10</code>.</p>
-<h3>Answer 2</h3>
-<pre><code class="language-scheme">(cdr '(10 20 30))
-</code></pre>
-<p><strong>Result:</strong></p>
-<pre><code class="language-text">(20 30)
-</code></pre>
-<p><strong>Explanation:</strong> <code>cdr</code> returns the remaining list after its first element. Removing the first element <code>10</code> leaves <code>(20 30)</code>.</p>
-<h3>Answer 3</h3>
-<pre><code class="language-scheme">(cons 5 '(10 20))
-</code></pre>
-<p><strong>Result:</strong></p>
-<pre><code class="language-text">(5 10 20)
-</code></pre>
-<p><strong>Explanation:</strong> <code>cons</code> creates a new pair with <code>5</code> as the first element and the existing list as the remainder. This produces a new list beginning with <code>5</code>.</p>
-<hr />
-<h2>TOPIC OVERVIEW</h2>
-<table>
-<thead>
-<tr>
-  <th>Topic</th>
-  <th>Important concept</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Programming paradigms</td>
-  <td>Imperative, functional, object-oriented and logic programming</td>
-</tr>
-<tr>
-  <td>Language evaluation</td>
-  <td>Readability and other evaluation criteria</td>
-</tr>
-<tr>
-  <td>Binding</td>
-  <td>Connecting a name to a value or function</td>
-</tr>
-<tr>
-  <td>Scope</td>
-  <td>Where variables are accessible</td>
-</tr>
-<tr>
-  <td>Lexical scoping</td>
-  <td>Resolving variables according to code structure</td>
-</tr>
-<tr>
-  <td>Binding techniques</td>
-  <td>Ad-hoc, deep and shallow binding</td>
-</tr>
-<tr>
-  <td>Type conversion</td>
-  <td>Changing values between data types</td>
-</tr>
-<tr>
-  <td>Local binding</td>
-  <td>Using <code>let</code> to create local variables</td>
-</tr>
-<tr>
-  <td>Conditional evaluation</td>
-  <td>Using <code>if</code> and <code>cond</code></td>
-</tr>
-<tr>
-  <td>Aggregate data types</td>
-  <td>Lists, tuples, dictionaries and records</td>
-</tr>
-<tr>
-  <td>Inductive data types</td>
-  <td>Base case and recursive constructors</td>
-</tr>
-<tr>
-  <td>Variant records</td>
-  <td>Tags identify active data forms</td>
-</tr>
-<tr>
-  <td>Abstract Syntax Trees</td>
-  <td>Tree representation of expression structure</td>
-</tr>
-<tr>
-  <td>Binary Search Trees</td>
-  <td>Smaller values left, greater values right</td>
-</tr>
-<tr>
-  <td>Lisp / Scheme</td>
-  <td><code>car</code>, <code>cdr</code> and <code>cons</code></td>
-</tr>
-</tbody>
-</table>
-<p><strong>CSCI 310 – Principles of Programming Languages</strong><br />
-<strong>Amity University Dubai</strong><br />
-<strong>Instructor: Dr. Maher Alrahhal</strong></p>
-</article></main></body></html>
+    ((&lt; attendance 75) "Not Eligible")
+    ((&gt;= mark 85) "Excellent")
+    ((&gt;= mark 60) "Pass")
+    (else "Fail")))</pre><div class="program-label">e. Type Conversion and Expression Evaluation ·</div><pre>a = "18"
+b = 4
+c = int(a) / b
+print(int(c) + b * 3)</pre></div><button aria-controls="a8" aria-expanded="false" class="primary answer-toggle" onclick="toggleAnswer('a8',this)">Show model answer</button><div class="answer" id="a8"><h4>Model answers · with reasoning</h4><p><strong>a.</strong> <code>15</code>. Convert <code>"12"</code> to <code>12</code>; <code>3.5 * 2 = 7</code>; <code>z = 19.0</code>; <code>int(z) - 4 = 15</code>.</p><p><strong>b.</strong> Two lines:</p><pre>16
+15</pre><p>Inside the function, <code>(5 + 3) * 2 = 16</code>. Outside, global <code>x = 10</code>, so <code>10 + 5 = 15</code>.</p><p><strong>c.</strong> <code>19</code>. Inner <code>b = 7</code>; <code>(12 - 7) + (7 * 2) = 5 + 14 = 19</code>.</p><p><strong>d.</strong> <code>"Pass"</code>. Attendance is not below 75, mark is not at least 85, and mark is at least 60.</p><p><strong>e.</strong> <code>16</code>. <code>int("18") / 4 = 4.5</code>; <code>int(4.5) = 4</code>; <code>4 + 4 * 3 = 16</code>.</p></div></div></section>
+<div class="toolbar"><button class="primary" onclick="toggleAll(true)">Reveal all answers</button><button class="secondary" onclick="toggleAll(false)">Hide all answers</button><button class="secondary" onclick="window.print()">Print / Save as PDF</button></div><div class="footer">CSCI 310 · Principles of Programming Languages · Interactive Practice<br/><a href="#top">Back to top ↑</a></div></main><script>function toggleAnswer(id,btn){const el=document.getElementById(id);const open=el.classList.toggle('open');btn.textContent=open?'Hide model answer':'Show model answer';btn.setAttribute('aria-expanded',String(open))}function toggleAll(show){document.querySelectorAll('.answer').forEach(el=>el.classList.toggle('open',show));document.querySelectorAll('.answer-toggle').forEach(btn=>{btn.textContent=show?'Hide model answer':'Show model answer';btn.setAttribute('aria-expanded',String(show))})}</script></body></html>
